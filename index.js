@@ -21,14 +21,17 @@ client.on('message', async message => {
 
   let args = processed.replace(config.prefix, '').split(' '); //Messag without prefix, split into array of args.
 
-  fse.readdir('commands', (err, files) => {
-    files.forEach(file => {
-      if (require(`./commands/${file}`).memberName == args[0].toLowerCase()) {
-        console.log(file);
-        require(`./commands/${file}`).command(message, args.slice(1)); //Sending the args without command name (member name).
-      }
+  fse.readdir('commands', (err, folders) => {
+    folders.forEach(folder => { //For each folder
+      fse.readdir(`commands/${folder}`, (err, files) => {
+        files.forEach(file => { //For each file in folder
+          if (require(`./commands/${folder}/${file}`).memberName == args[0].toLowerCase()) {
+            console.log(file);
+            require(`./commands/${folder}/${file}`).command(message, args.slice(1)); //Sending the args without command name (member name).
+          }
+        });
+      });
     });
   });
 });
-
 client.login(config.token);
