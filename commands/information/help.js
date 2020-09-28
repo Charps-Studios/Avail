@@ -17,7 +17,7 @@ module.exports = {
         let asString = groups.toString();
 
         let exampleEmbed = new Discord.MessageEmbed()
-          .setColor('#0099ff')
+          .setColor('#7900C3')
           .setTitle('Command Groups')
           .setDescription(`\`${asString.replace(/,/g, '\` \`')}\``)
       	   .setFooter(`To find commands in groups, do ${config.prefix}help <group>`)
@@ -55,7 +55,7 @@ module.exports = {
               let asString = commands.toString();
 
               let exampleEmbed = new Discord.MessageEmbed()
-                .setColor('#0099ff')
+                .setColor('#7900C3')
                 .setTitle(`Commands in ${folder.slice(0, 1).toUpperCase() + folder.slice(-folder.length + 1)}`) //Makes it start with uppercase
                 .setDescription(`\`${asString.replace(/,/g, '\` \`')}\``)
             	  .setFooter(`To find what a command does, do ${config.prefix}help <command>`)
