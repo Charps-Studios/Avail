@@ -1,1 +1,1 @@
-nodemon .
+npm start

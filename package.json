@@ -1,10 +1,12 @@
 {
-  "name": "avail-2.0",
+  "name": "avail",
   "version": "1.0.0",
   "description": "Third attempt",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart-dev": "echo test",
+    "start-dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "Bailey Moir (Charps)",
   "license": "ISC",
