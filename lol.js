@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 
 module.exports = {
   check: function(message) {
-    //if (message.content.toLowerCase().startsWith('lol ') || message.content.toLowerCase().includes(' lol ') || message.content.toLowerCase().endsWith(' lol') || message.content.toLowerCase().endsWith(' lol.') || message.content.toLowerCase().endsWith(' lol!') || message.content.toLowerCase() == "lol") { //If lol
     if (message.content.toLowerCase().includes('lol')) {
       message.delete().catch( error => {
         console.log(error);
@@ -24,7 +23,7 @@ module.exports = {
         .setColor('#7900C3')
         .setTitle(quips[Math.floor(Math.random() * (9 - 0) + 0)])
         .setDescription(`\'Lol\' is not permited on ${message.guild.name}`)
-        //.setFooter(``)
+        .setFooter(`Commit die`)
         .setTimestamp();
       message.author.send(embed);
     }

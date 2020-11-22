@@ -1,6 +1,6 @@
 {
   "name": "avail",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Third attempt",
   "main": "index.js",
   "scripts": {
