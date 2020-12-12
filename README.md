@@ -1,4 +1,4 @@
-# avail
+# Avail
 Finished this project.
 
 A discord bot I created for me and my friends, is up 24/7 hosted locally, was great fun to code this.
