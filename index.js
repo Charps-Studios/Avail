@@ -17,7 +17,6 @@ client.on('message', async message => {
   if(message.author.bot) return; //If sent by bot, don't process.
 
   require('./lol.js').check(message);
-  require('./..js').check(message);
 
   if(!processed.startsWith(config.prefix)) return; //If doesn't start with prefix, don't process.
 
